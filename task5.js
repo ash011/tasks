@@ -6,7 +6,7 @@ Example։ 'aabb' Expected Output: true
 Example։ 'abbd' Expected Output: false
 */
 
-let txt = "aabb";
+let txt = "aaeeebb";
 
 function palindrome(str){
     let obj = {};
@@ -22,7 +22,8 @@ function palindrome(str){
     let values = Object.values(obj)
     values.forEach(el => el % 2 !== 0 ? odd++ : false)
 
-    if(odd === 0 || odd % 2 !== 0) return true;
+    if(odd === 0 || odd === 1) return true;
+
     return false
 }
 
